@@ -1,0 +1,20 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+allowBuilds:
+  '@prisma/client': true
+  '@prisma/engines': true
+  '@swc/core': true
+  esbuild: true
+  msgpackr-extract: true
+  prisma: true
+
+minimumReleaseAgeExclude:
+  - '@radix-ui/react-accordion@1.2.21'
+  - '@radix-ui/react-collapsible@1.1.21'
+  - '@radix-ui/react-collection@1.1.16'
+  - '@radix-ui/react-direction@1.1.5'
+  - '@radix-ui/react-presence@1.1.11'
+  - '@radix-ui/react-primitive@2.1.11'
+  - '@radix-ui/react-slot@1.4.0'

@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      Role     @default(USER)
+  files     File[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+model File {
+  id           String   @id @default(uuid())
+  originalName String   @map("original_name")
+  mimeType     String   @map("mime_type")
+  size         Int
+  storagePath  String   @map("storage_path") // Private storage path on server
+  isPrivate    Boolean  @default(true) @map("is_private")
+  uploaderId   String   @map("uploader_id")
+  uploader     User     @relation(fields: [uploaderId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("files")
+}

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Top arc for GENESIS CLOTHING -->
+    <path id="topInquiryArc" d="M 14,60 A 46,46 0 0,1 106,60" />
+    <!-- Bottom arc for INQUIRY -->
+    <path id="bottomInquiryArc" d="M 106,60 A 46,46 0 0,1 14,60" />
+  </defs>
+  
+  <!-- Outer circular guide ring (very subtle) -->
+  <circle cx="60" cy="60" r="56" fill="none" stroke="rgba(20,20,22,0.08)" stroke-width="1" stroke-dasharray="2 3" />
+  
+  <!-- Top Text: GENESIS CLOTHING -->
+  <text font-size="8.8" fill="#141416" font-family="'Outfit', -apple-system, sans-serif" font-weight="800" letter-spacing="3.5">
+    <textPath href="#topInquiryArc" startOffset="50%" text-anchor="middle">
+      GENESIS CLOTHING
+    </textPath>
+  </text>
+  
+  <!-- Bottom Text: INQUIRY -->
+  <text font-size="8.8" fill="#141416" font-family="'Outfit', -apple-system, sans-serif" font-weight="800" letter-spacing="4.5">
+    <textPath href="#bottomInquiryArc" startOffset="50%" text-anchor="middle">
+      • INQUIRY •
+    </textPath>
+  </text>
+  
+  <!-- Center Geometric G Logo -->
+  <g transform="translate(44, 44) scale(0.32)">
+    <path
+      d="M30 10 L80 10 L95 25 L95 40 L60 40 L60 60 L80 60 L80 90 L30 90 L10 70 L10 30 Z"
+      fill="#141416"
+      fill-rule="evenodd"
+    />
+  </g>
+</svg>

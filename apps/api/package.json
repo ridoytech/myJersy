@@ -1,0 +1,48 @@
+{
+  "name": "@repo/api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nest build",
+    "dev": "nest start --watch",
+    "start": "node dist/src/main.js",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/src/main.js",
+    "lint": "tsc --noEmit",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "vitest run --config ./vitest.config.e2e.ts"
+  },
+  "dependencies": {
+    "@nestjs/bullmq": "^12.0.0",
+    "@nestjs/common": "^12.1.2",
+    "@nestjs/core": "^12.1.2",
+    "@nestjs/platform-express": "^12.1.2",
+    "@repo/database": "workspace:*",
+    "@repo/shared": "workspace:*",
+    "bullmq": "^5.41.0",
+    "dotenv": "^16.4.7",
+    "ioredis": "^5.6.0",
+    "multer": "^1.4.5-lts.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^12.0.8",
+    "@nestjs/testing": "^12.1.2",
+    "@repo/tsconfig": "workspace:*",
+    "@swc/cli": "^0.6.0",
+    "@swc/core": "^1.11.8",
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^24.0.0",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "typescript": "^5.8.2",
+    "unplugin-swc": "^1.5.1",
+    "vitest": "^3.0.7"
+  }
+}
