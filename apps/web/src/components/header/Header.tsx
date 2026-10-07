@@ -51,10 +51,10 @@ export function Header({ theme = 'dark' }: HeaderProps) {
     <header
       className={`fixed z-50 transition-all duration-500 ease-out ${
         scrolled
-          ? `top-3 sm:top-5 left-3 right-3 sm:left-8 sm:right-8 lg:left-12 lg:right-12 rounded-full px-4 sm:px-6 py-2.5 sm:py-3 ${
+          ? `top-3 sm:top-5 left-4 right-4 sm:left-12 sm:right-12 lg:left-24 lg:right-24 2xl:left-40 2xl:right-40 rounded-full px-5 sm:px-7 py-3.5 sm:py-4 ${
               isLightSection
-                ? 'bg-white/90 backdrop-blur-md border border-black/10 shadow-lg'
-                : 'bg-[#0E0F12]/90 backdrop-blur-md border border-white/10 shadow-2xl'
+                ? 'bg-white/90 backdrop-blur-md border border-black/10 shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
+                : 'bg-[#0E0F12]/90 backdrop-blur-md border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.2)]'
             }`
           : 'top-0 left-0 right-0 px-6 sm:px-10 lg:px-16 py-5 sm:py-6 bg-transparent'
       }`}
