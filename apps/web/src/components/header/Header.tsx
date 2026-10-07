@@ -49,15 +49,17 @@ export function Header({ theme = 'dark' }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 px-6 sm:px-10 lg:px-16 transition-all duration-300 ${
+      className={`fixed z-50 transition-all duration-500 ease-out ${
         scrolled
-          ? isLightSection
-            ? 'py-3.5 bg-[#F6F5F2]/90 backdrop-blur-xl border-b border-black/10 shadow-sm'
-            : 'py-3.5 bg-black/85 backdrop-blur-xl border-b border-white/10 shadow-2xl'
-          : 'py-5 bg-transparent'
+          ? `top-3 sm:top-5 left-3 right-3 sm:left-8 sm:right-8 lg:left-12 lg:right-12 rounded-full px-4 sm:px-6 py-2.5 sm:py-3 ${
+              isLightSection
+                ? 'bg-white/90 backdrop-blur-md border border-black/10 shadow-lg'
+                : 'bg-[#0E0F12]/90 backdrop-blur-md border border-white/10 shadow-2xl'
+            }`
+          : 'top-0 left-0 right-0 px-6 sm:px-10 lg:px-16 py-5 sm:py-6 bg-transparent'
       }`}
     >
-      <div className="w-full flex items-center justify-between">
+      <div className="relative w-full flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <div
@@ -168,7 +170,7 @@ export function Header({ theme = 'dark' }: HeaderProps) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-3 p-4 rounded-2xl bg-slate-950/95 backdrop-blur-xl border border-white/10 text-white flex flex-col gap-3 shadow-2xl animate-in fade-in slide-in-from-top-2">
+        <div className="absolute top-full left-0 right-0 mt-4 md:hidden p-4 rounded-2xl bg-slate-950/95 backdrop-blur-xl border border-white/10 text-white flex flex-col gap-3 shadow-2xl animate-in fade-in slide-in-from-top-2">
           <a
             href="#categories"
             onClick={() => setMobileMenuOpen(false)}
