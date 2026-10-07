@@ -15,6 +15,7 @@ import { Footer } from '@/components/footer/Footer';
 import { ProductDetailModal } from '@/components/products/ProductDetailModal';
 import { QuoteModal } from '@/components/modals/QuoteModal';
 import { CartDrawer } from '@/components/modals/CartDrawer';
+import { FloatingSocialBadge } from '@/components/ui/FloatingSocialBadge';
 
 export default function Home() {
   return (
@@ -59,6 +60,7 @@ export default function Home() {
         <ProductDetailModal />
         <QuoteModal />
         <CartDrawer />
+        <FloatingSocialBadge />
       </div>
     </CartProvider>
   );

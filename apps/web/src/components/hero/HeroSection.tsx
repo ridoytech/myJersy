@@ -355,47 +355,10 @@ export function HeroSection() {
 
       {/* BOTTOM BAR: Left stamp & socials, Center tagline, Right next-look thumbnail */}
       <div className="relative z-20 w-full pt-4 flex items-end justify-between text-xs text-white/60">
-        {/* Bottom Left: Circular Heritage Badge & Socials matching Image 2 */}
-        <div className="flex flex-col items-start gap-3.5">
-          {/* Circular Stamp: MY JERSEY • HERITAGE WEAR */}
-          <div
-            onClick={() => setIsQuoteModalOpen(true)}
-            className="relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center cursor-pointer group hover:scale-105 transition-transform select-none"
-            title="MY JERSEY • Heritage Wear"
-          >
-            <Image
-              src="/images/genesis-badge.svg"
-              alt="MY JERSEY • Heritage Wear"
-              width={96}
-              height={96}
-              className="w-full h-full object-contain pointer-events-none drop-shadow-md"
-            />
-          </div>
-
-          {/* Social Icons (Instagram, Facebook, X) matching Image 2 */}
-          <div className="flex items-center gap-2.5 text-white/80">
-            <a
-              href="#"
-              className="w-8 h-8 rounded-full border border-white/20 bg-black/20 hover:border-white/60 hover:bg-white/15 flex items-center justify-center transition-all cursor-pointer"
-              aria-label="Instagram"
-            >
-              <InstagramIcon className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="#"
-              className="w-8 h-8 rounded-full border border-white/20 bg-black/20 hover:border-white/60 hover:bg-white/15 flex items-center justify-center transition-all cursor-pointer"
-              aria-label="Facebook"
-            >
-              <FacebookIcon className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="#"
-              className="w-8 h-8 rounded-full border border-white/20 bg-black/20 hover:border-white/60 hover:bg-white/15 flex items-center justify-center transition-all cursor-pointer"
-              aria-label="X (Twitter)"
-            >
-              <XIcon className="w-3 h-3" />
-            </a>
-          </div>
+        {/* Bottom Left: (Removed) */}
+        <div className="flex flex-col items-start gap-3.5 invisible" aria-hidden="true">
+          {/* Spacer to keep layout balanced */}
+          <div className="w-20 sm:w-24 h-20 sm:h-24"></div>
         </div>
 
         {/* Bottom Center: Tagline & Accent Line directly under center jersey */}
